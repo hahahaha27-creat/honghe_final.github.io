@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trip</title>
+    <link rel="stylesheet" href="./css/base.css"><link rel="stylesheet" href="./css/index.css"><link rel="stylesheet" href="./css/trip.css">
+</head>
+<body>
+    <!-- 顶部导航栏  -->
+    <div class="nave-menu">
+        <div class="background">
+            <a href="https://www.hh.cn/ynhhzMini/site/" target="_blank">
+                <img src="./img/logo.png" alt="网站Logo">
+            </a>
+        </div>
+        <div class="search">
+            <ul>
+                <li><a href="./index1.html" target="_blank">首页</a></li>
+                <li><a href="./history.html" target="_blank">历史文化</a></li>
+                <li><a href="./view.html"  target="_blank">自然风光</a></li>
+                <li><a href="./food.html"  target="_blank">美食</a></li>
+                <li><a href="#"  target="_blank">旅游推荐</a></li>
+            </ul>
+        </div>
+    </div>   
+
+  <!-- 标题横幅 -->
+  <header class="recommend-hero">
+    <h1>探索红河的多彩文化、自然秘境与民族盛宴</h1>
+  </header>
+
+  <!-- 推荐列表 -->
+  <section class="recommend-list">
+    <!-- 项目1：绿春长街宴 -->
+    <div class="recommend-row">
+      <img src="./img/Camera_XHS_17444455828431040g2sg30s69lf7h326g49i8.jpg" alt="绿春长街宴" />
+      <div class="text">
+        <h2>绿春长街宴</h2>
+        <p>绿春长街宴是哈尼族的传统节庆活动之一，每逢重大节日，村民会在街道两旁排上数百米长的宴席，整齐地摆放着丰富的民族美食。从酸辣鱼、糯米饭到各类山野食材，展现哈尼族勤劳与热情好客。游客可在热闹的氛围中与村民同席共食，欣赏原生态歌舞表演，体验地道民族风情。</p>
+      </div>
+    </div>
+
+    <!-- 项目2：弥勒温泉 -->
+    <div class="recommend-row">
+      <img src="./img/Camera_XHS_17444457364891040g0083150dneviha205o5h.jpg" alt="弥勒温泉" />
+      <div class="text">
+        <h2>弥勒温泉</h2>
+        <p>弥勒温泉坐落于云南红河的弥勒市，是一处天然地热资源丰富的康养胜地。这里温泉水质清澈透明，富含多种矿物质，能够舒缓压力、改善皮肤和促进血液循环。温泉度假区设有多种温泉池、SPA理疗室和温泉主题酒店，适合情侣、家庭以及长辈游客享受放松时光。</p>
+      </div>
+    </div>
+
+    <!-- 项目3：南沙泼水节 -->
+    <div class="recommend-row">
+      <img src="./img/Camera_XHS_17444458381631040g2sg311juj71tmg605n87.jpg" alt="南沙泼水节" />
+      <div class="text">
+        <h2>南沙泼水节</h2>
+        <p>南沙泼水节是傣族人民庆祝新年最重要的节日活动，时间一般在阳历四月。节日期间，南沙街头热闹非凡，人们身穿节日盛装，互相泼水以示祝福和洗净尘埃。泼水节期间还有傣族风情游行、水灯祈福、民族乐舞、赶摆等活动，极富文化张力，是一次难得的民俗体验之旅。</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const rows = document.querySelectorAll('.recommend-row');
+      rows.forEach((row, idx) => {
+        row.style.opacity = 0;
+        row.style.transform = 'translateY(50px)';
+        row.style.transition = `all 0.6s ease ${(idx * 0.3)}s`;
+      });
+      setTimeout(() => {
+        rows.forEach(row => {
+          row.style.opacity = 1;
+          row.style.transform = 'translateY(0)';
+        });
+      }, 200);
+    });
+  </script
+</body>
+</html>
